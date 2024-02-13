@@ -198,16 +198,16 @@ section {
         transform: rotate(0deg);
     }
     25%,45% {
-        transform: rotate(-90deg);
+        transform: rotate(90deg);
     }
     50%,70% {
-        transform: rotate(-1800deg);
+        transform: rotate(180deg);
     }
     75%,95% {
-        transform: rotate(-2700deg);
+        transform: rotate(270deg);
     }
     100% {
-        transform: rotate(-360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -221,7 +221,7 @@ section {
     transform: rotate(calc(360deg / 4 * var(--i)));
     transform-origin: 384px;
     background: var(--bg-color);
-    padding: 13px 0;
+    padding: 15px 0;
 }
 
 .home .profession-box .profession:nth-child(1) i {
