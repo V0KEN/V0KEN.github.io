@@ -219,16 +219,17 @@
       <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="#">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="2c77bfaf-e277-4a75-a275-5371dd5e9808">
           <div class="input-box">
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email Address">
+            <input type="text" name="name" placeholder="Full Name">
+            <input type="email" name="email" placeholder="Email Address">
           </div>
           <div class="input-box">
-            <input type="number" placeholder="Mobile Number">
-            <input type="text" placeholder="Email Subject">
+            <input type="number" id="phone" placeholder="Mobile Number">
+            <input type="text" id="subject" placeholder="Email Subject">
           </div>
-          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+          <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
           <input type="submit" value="Send Message" class="btn">
         </form>
       </section>
@@ -252,5 +253,35 @@
 
       <!-- custom js -->
       <script src="JS/script.js"></script>
+
+      <!-- Send email function -->
+      <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+      <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script>
+        function sendEmail() {
+          Email.send({
+          SecureToken: "be5ff336-19e1-4b7a-beec-cad29fc701b2",
+          To : 'ken.vo5901@gmail.com',
+          From : document.getElementById("email").value,
+          Subject : document.getElementById("subject").value,
+          Body : "Name: " + document.getElementById("name").value
+                  + "<br> Email: " + document.getElementById("email").value
+                  + "<br> Phone Number: " + document.getElementById("phone").value
+                  + "<br> Message: " + document.getElementById("message").value
+        }).then(
+            message => {
+              if (message == "OK") {
+                Swal.fire({
+                  title: "Success!",
+                  text: "Message sent successfully!",
+                  icon: "success"
+                });
+              } else {
+                alert(message)
+              }
+            }
+          );
+        }
+      </script> -->
     </body>
 </html>
